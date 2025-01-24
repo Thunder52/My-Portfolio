@@ -1,0 +1,30 @@
+.animate {
+    display: inline-block; /* Ensure proper layout handling */
+    position: relative;
+    color: #ED2279;
+  }
+  
+  .animate::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 4px solid #ED2279;
+    background-color: #0a0a0a;
+    animation: text 3s infinite steps(10) backwards;
+    z-index: 1;
+  }
+  
+  @keyframes text {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
